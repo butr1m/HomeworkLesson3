@@ -38,10 +38,38 @@ public class HomeworkLesson3 {
                 System.out.println("Введено неверное число!");
         }
 
-        int[] array = {1,2,3, 4, 5, 6, 7, 8, 9, 10};
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
-        for (int i = array.length-1; i >= 0; i--) {
-            System.out.print(array[i]+" ");
+        for (int i = array.length - 1; i >= 0; i--) {
+            System.out.print(array[i] + " ");
+        }
+
+        System.out.println();
+        int[][] squareArray = new int[2][5];
+
+        squareArray[0][0] = 1;
+        squareArray[0][1] = 2;
+        squareArray[0][2] = 3;
+        squareArray[0][3] = 4;
+        squareArray[0][4] = 5;
+        squareArray[1][0] = 6;
+        squareArray[1][1] = 7;
+        squareArray[1][2] = 8;
+        squareArray[1][3] = 9;
+        squareArray[1][4] = 10;
+
+        int index = squareArray[0][0];
+
+        for (int i = 0; i < squareArray.length; i++) {
+            for (int j = 0; j < squareArray[i].length; j++) {
+                if (squareArray[i][j] >= index) {
+                    index = squareArray[i][j];
+                    int indexI = i;
+                    int indexJ = j;
+                    System.out.print(squareArray[i][j] + "[" + indexI + "]" + "[" + indexJ + "]" + " ");
+                }
+            }
+            System.out.println();
         }
     }
 }
